@@ -1,0 +1,5 @@
+{
+    ["E:\\code\\project\\kvm_demo_algo"] = "230518",
+    ["E:\\code\\project\\lighting\\ai_framework"] = "230522",
+    ["E:\\code\\project\\lighting\\jilin\\AIAlgoSample"] = "230309"
+}

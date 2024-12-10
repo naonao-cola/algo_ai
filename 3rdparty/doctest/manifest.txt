@@ -1,0 +1,26 @@
+{
+    envs = {
+        PATH = {
+            "bin"
+        }
+    },
+    arch = "x64",
+    name = "doctest",
+    version = "2.4.9",
+    mode = "release",
+    plat = "windows",
+    repo = {
+        url = "https://gitee.com/tboox/xmake-repo.git",
+        commit = "16e9a73bca104eef3e336ca1848e67c01607d1b7",
+        branch = "master",
+        name = "xmake-repo"
+    },
+    description = "The fastest feature-rich C++11/14/17/20 single-header testing framework for unit tests and TDD",
+    vars = { },
+    configs = {
+        shared = false,
+        debug = false,
+        pic = true,
+        vs_runtime = "MT"
+    }
+}
