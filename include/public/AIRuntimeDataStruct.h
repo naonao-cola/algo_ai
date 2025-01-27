@@ -49,7 +49,8 @@ enum eAIAlgoType : int {
     MSAE,
     ANOMALIB,
     YOLO8_OBB,
-    YOLOV8_SEG
+    YOLOV8_SEG,
+    DEIM
 };
 
 
@@ -77,7 +78,7 @@ struct stAIInferParam {
     int optHeightSize{-1};
     // 动态尺寸输入
     std::vector<std::vector<int>> dim;
-    
+
 
     ////////////////
     stAIInferParam() = default;
@@ -135,15 +136,15 @@ struct stAIModelInfo {
         char buff[400];
         std::string rst = " \n ============================================================================";
 #ifdef _WIN32
-        sprintf_s(buff, "%s\n model version:\t\t %d \n model id:\t\t %d \n algoType:\t\t %d \n modelPath:\t\t%s %s", 
+        sprintf_s(buff, "%s\n model version:\t\t %d \n model id:\t\t %d \n algoType:\t\t %d \n modelPath:\t\t%s %s",
                 rst.c_str(), modelVersion, modelId, (int)algoType, modelPath.c_str(), rst.c_str());
 #elif __linux__
-        snprintf(buff, sizeof(buff), "%s\n model version:\t\t %d \n model id:\t\t %d \n algoType:\t\t %d \n modelPath:\t\t%s %s", 
+        snprintf(buff, sizeof(buff), "%s\n model version:\t\t %d \n model id:\t\t %d \n algoType:\t\t %d \n modelPath:\t\t%s %s",
             rst.c_str(), modelVersion, modelId, (int)algoType, modelPath.c_str(), rst.c_str());
 #endif
         return std::string(buff);
     }
-   
+
 };
 
 

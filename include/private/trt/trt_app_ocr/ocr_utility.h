@@ -1,4 +1,4 @@
-#ifndef __OCR_UTILITY__
+﻿#ifndef __OCR_UTILITY__
 #define __OCR_UTILITY__
 
 #include <future>

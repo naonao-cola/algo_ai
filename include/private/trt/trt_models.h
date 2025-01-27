@@ -14,6 +14,7 @@
 #include "./trt_app_anomalib/anomalib.hpp"
 #include "./trt_app_yolo8_obb/yolo8_obb.hpp"
 #include "./trt_app_yolo8seg/yolo8_seg.hpp"
+#include "./trt_app_deim/deim.hpp"
 #endif // !__TRT_MODELS_H__
 
 

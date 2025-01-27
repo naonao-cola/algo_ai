@@ -207,7 +207,7 @@ std::vector<stResultItem> AIRuntime::ToRuntimeResult(Algo::BoxArray& boxs, TaskI
                     for (const auto& char_index : box.ocr_char_index) {
                         rst.ocr_char_index.push_back(char_index);
                     }
-                } 
+                }
                 break;
             case OCR_DET:
                 rst.code       = box.class_label;
@@ -542,6 +542,9 @@ void AIRuntime::create_trt_model(stAIModelInfo modelInfo, std::shared_ptr<Algo::
             );
         case YOLOV8_SEG:
             infer = yolo8_seg::create_infer(modelInfo.modelPath, modelInfo.inferParam.gpuId, modelInfo.inferParam.confidenceThreshold, modelInfo.inferParam.nmsThreshold, modelInfo.inferParam.maxObjectNums, modelInfo.inferParam.segThreshold, modelInfo.inferParam.maxAreaCont, modelInfo.inferParam.dim);
+            break;
+        case DEIM:
+            infer = deim::create_infer(modelInfo.modelPath, modelInfo.inferParam.gpuId, modelInfo.inferParam.confidenceThreshold, modelInfo.inferParam.maxObjectNums, modelInfo.inferParam.dim);
             break;
         default:
             LOG_INFOE("Model Type error! code={}", modelInfo.algoType);
