@@ -52,4 +52,4 @@ vs2022/
 # End of https://www.toptal.com/developers/gitignore/api/c++
 
 #cpp
-sample/
+.history
